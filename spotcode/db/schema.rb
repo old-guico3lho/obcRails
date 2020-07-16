@@ -56,15 +56,6 @@ ActiveRecord::Schema.define(version: 2020_07_10_061437) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "favorites", force: :cascade do |t|
-    t.integer "user_id", null: false
-    t.integer "favoritable_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["favoritable_id"], name: "index_favorites_on_favoritable_id"
-    t.index ["user_id"], name: "index_favorites_on_user_id"
-  end
-
   create_table "recently_heards", force: :cascade do |t|
     t.integer "user_id", null: false
     t.integer "album_id", null: false
@@ -72,12 +63,6 @@ ActiveRecord::Schema.define(version: 2020_07_10_061437) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["album_id"], name: "index_recently_heards_on_album_id"
     t.index ["user_id"], name: "index_recently_heards_on_user_id"
-  end
-
-  create_table "risos", force: :cascade do |t|
-    t.string "name"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "songs", force: :cascade do |t|
@@ -111,8 +96,6 @@ ActiveRecord::Schema.define(version: 2020_07_10_061437) do
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "albums", "artists"
   add_foreign_key "albums", "categories"
-  add_foreign_key "favorites", "favoritables"
-  add_foreign_key "favorites", "users"
   add_foreign_key "recently_heards", "albums"
   add_foreign_key "recently_heards", "users"
   add_foreign_key "songs", "albums"
