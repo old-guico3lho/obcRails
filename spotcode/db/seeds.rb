@@ -29,7 +29,7 @@ yellow_chair.photo.attach(io: File.open("#{tmp_dir}/seed_files/yellow_chair.jpg"
 gubernator = andrew_howes.albums.create(name: "Gubernator", category: rock)
 gubernator.cover.attach(io: File.open("#{tmp_dir}/seed_files/gubernator.jpg"), filename: "gubernator.jpg")
 
-barcelona = yellow_chair.albums.create(name: "Barcelona", category: rock)
+barcelona = yellow_chair.albums.create(name: "Nilsona", category: rock)
 barcelona.cover.attach(io: File.open("#{tmp_dir}/seed_files/gubernator.jpg"), filename: "gubernator.jpg")
 
 #SONGS
@@ -44,13 +44,13 @@ barcelona.cover.attach(io: File.open("#{tmp_dir}/seed_files/gubernator.jpg"), fi
 via_laietana = barcelona.songs.create(title: "Via Laietana", played_count: Random.rand(1000))
 via_laietana.file.attach(io: File.open("#{tmp_dir}/seed_files/musics/via_laietana.mp3"), filename: "via_laietana.mp3")
 ##yellow_chair/barcelona
-itaca = barcelona.songs.create(title: "Via Laietana", played_count: Random.rand(1000))
+itaca = barcelona.songs.create(title: "Itaca", played_count: Random.rand(1000))
 itaca.file.attach(io: File.open("#{tmp_dir}/seed_files/musics/itaca.mp3"), filename: "itaca.mp3")
 ##andrew_howes/gubernator
-crimea = barcelona.songs.create(title: "Via Laietana", played_count: Random.rand(1000))
+crimea = barcelona.songs.create(title: "Crimea", played_count: Random.rand(1000))
 crimea.file.attach(io: File.open("#{tmp_dir}/seed_files/musics/crimea.mp3"), filename: "crimea.mp3")
 ##andrew_howes/gubernator
-helmsman = barcelona.songs.create(title: "Via Laietana", played_count: Random.rand(1000))
+helmsman = barcelona.songs.create(title: "Helmsman", played_count: Random.rand(1000))
 helmsman.file.attach(io: File.open("#{tmp_dir}/seed_files/musics/helmsman.mp3"), filename: "helmsman.mp3")
 
 #USERS
