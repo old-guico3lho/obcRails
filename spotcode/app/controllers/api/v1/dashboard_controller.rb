@@ -13,6 +13,6 @@ class Api::V1::DashboardController < ApplicationController
     # if heard_categories.present?
     #   @recommended_albums = Album.joins(:category, :songs).where(category: heard_categories).order("songs.played_count").select("distinct albums.*").limit(12)
     # else
-    @recommended_albums = Album.all.sample(12)
+    @recommended_albums = Album.all.sample(4)
   end
 end
